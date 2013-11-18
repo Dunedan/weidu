@@ -59,6 +59,7 @@ else
 			export USEOPT = .opt
 			PROJECT_CMODULES = nix
 			export TKDIR = obj-tk
+			export LINKFLAGS = -ccopt -macosx_version_min=10.6
 		endif
 	endif
 endif
