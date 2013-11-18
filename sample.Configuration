@@ -59,13 +59,14 @@ else
 			export USEOPT = .opt
 			PROJECT_CMODULES = nix
 			export TKDIR = obj-tk
+			export COMPILEFLAGS = -ccopt -macosx_version_min=10.6
 			export LINKFLAGS = -ccopt -macosx_version_min=10.6
 		endif
 	endif
 endif
 
 ifeq ($(findstring stable,$(wildcard stable)), )
-	export COMPILEFLAGS = -w y -ccopt -w -g
+	export COMPILEFLAGS += -w y -ccopt -w -g
 else
-	export COMPILEFLAGS = -w y -ccopt -w
+	export COMPILEFLAGS += -w y -ccopt -w
 endif
